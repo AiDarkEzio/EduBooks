@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduBooks - Your Gateway to Knowledge</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="#hero" class="logo">
+        <i class="fa-solid fa-book-open logo-icon"></i>
+        <span>EduBooks</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">About</a></li>
+          <li><a href="#books" class="nav-link">Books</a></li>
+          <li><a href="#books" class="nav-link">Categories</a></li>
+          <li><a href="#footer" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="search-box">
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search books..." 
+          aria-label="Search books"
+        >
+        <button id="searchBtn" type="button" aria-label="Submit Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 class="hero-title">Your Gateway to Knowledge</h1>
+          <p class="hero-description">
+            Discover a wide range of academic books, resources and materials to support your learning journey.
+          </p>
+          <a href="#books" class="btn btn-primary" id="exploreBtn">Explore Books</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="features-grid">
+
+          <div class="feature-card">
+            <div class="feature-icon icon-blue">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <h3 class="feature-title">Wide Collection</h3>
+            <p class="feature-desc">Access hundreds of books across multiple subjects.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon icon-green">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3 class="feature-title">For Students</h3>
+            <p class="feature-desc">Find recommended books for your courses.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon icon-orange">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <h3 class="feature-title">Easy Access</h3>
+            <p class="feature-desc">Browse and search books quickly.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon icon-purple">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <h3 class="feature-title">Quality Resources</h3>
+            <p class="feature-desc">Reliable and up-to-date learning materials.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="books-section" id="books">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Books</h2>
+          <a href="#books" class="view-all-link" id="viewAllBtn">View All &rarr;</a>
+        </div>
+
+        <div class="books-grid" id="booksGrid">
+          <article class="book-card" data-category="Technology" data-title="Computer Science Essentials" data-author="Dr. Alan Turing" data-isbn="978-0131103627" data-desc="A foundational textbook exploring data structures, algorithms, and core computing concepts indispensable for any computer science student.">
+            <div class="book-cover-container">
+              <img 
+                src="images/CS-Book-Cover.png" 
+                alt="Book cover: Computer Science Essentials" 
+                class="book-cover"
+                onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80'"
+              >
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Computer Science Essentials</h3>
+              <span class="book-category">Technology</span>
+              <button type="button" class="btn btn-outline view-details-btn">View Details</button>
+            </div>
+          </article>
+
+          <article class="book-card" data-category="Computing" data-title="Web Development Fundamentals" data-author="Sarah Jenkins" data-isbn="978-0596159900" data-desc="Master the fundamentals of frontend development with modern HTML5, responsive CSS3 techniques, and dynamic JavaScript execution.">
+            <div class="book-cover-container">
+              <img 
+                src="images/WD-Book-Cover.png" 
+                alt="Book cover: Web Development Fundamentals" 
+                class="book-cover"
+                onerror="this.src='https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80'"
+              >
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Web Development Fundamentals</h3>
+              <span class="book-category">Computing</span>
+              <button type="button" class="btn btn-outline view-details-btn">View Details</button>
+            </div>
+          </article>
+
+          <article class="book-card" data-category="Data & Analytics" data-title="Data Science Basics" data-author="Michael Chen, Ph.D." data-isbn="978-1491957660" data-desc="Learn data exploration, cleaning, statistical inference, and machine learning methods with practical hands-on examples.">
+            <div class="book-cover-container">
+              <img 
+                src="images/DS-Book-Cover.png" 
+                alt="Book cover: Data Science Basics" 
+                class="book-cover"
+                onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80'"
+              >
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Data Science Basics</h3>
+              <span class="book-category">Data & Analytics</span>
+              <button type="button" class="btn btn-outline view-details-btn">View Details</button>
+            </div>
+          </article>
+
+          <article class="book-card" data-category="Business" data-title="Business Management" data-author="Emily R. Stone" data-isbn="978-0078029363" data-desc="A strategic guide covering organizational leadership, project operations, enterprise financial modeling, and corporate culture.">
+            <div class="book-cover-container">
+              <img 
+                src="images/BM-Book-Cover.png" 
+                alt="Book cover: Business Management" 
+                class="book-cover"
+                onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80'"
+              >
+            </div>
+            <div class="book-info">
+              <h3 class="book-title">Business Management</h3>
+              <span class="book-category">Business</span>
+              <button type="button" class="btn btn-outline view-details-btn">View Details</button>
+            </div>
+          </article>
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+          <i class="fa-regular fa-folder-open"></i>
+          <p>No books found matching your criteria. Try another keyword!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+      <div class="container newsletter-container">
+        <h2 class="newsletter-title">Join Our Learning Community</h2>
+        <p class="newsletter-desc">Get the latest book recommendations, study tips and updates.</p>
+        
+        <form class="newsletter-form" id="newsletterForm" novalidate>
+          <div class="form-group">
+            <input 
+              type="email" 
+              id="newsletterEmail" 
+              placeholder="Enter your email address..." 
+              required
+              aria-label="Email address for newsletter"
+            >
+            <button type="submit" class="btn btn-primary btn-subscribe">Subscribe</button>
+          </div>
+          <div id="newsletterMessage" class="feedback-msg" role="alert"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col brand-col">
+          <div class="footer-logo">
+            <i class="fa-solid fa-book-open"></i>
+            <span>EduBooks</span>
+          </div>
+          <p class="footer-text">
+            EduBooks is a student-focused platform providing access to quality academic books and learning resources.
+          </p>
+        </div>
+
+        <div class="footer-col links-col">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">About</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#footer">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col social-col">
+          <h4 class="footer-col-title">Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 EduBooks. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="bookModal" aria-hidden="true" role="dialog">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-body">
+        <h2 id="modalTitle" class="modal-book-title">Book Title</h2>
+        <span id="modalCategory" class="modal-book-category">Category</span>
+        <p class="modal-meta"><strong>Author:</strong> <span id="modalAuthor">Author Name</span></p>
+        <p class="modal-meta"><strong>ISBN:</strong> <span id="modalIsbn">ISBN Number</span></p>
+        <p class="modal-description" id="modalDesc">Detailed description of the book goes here.</p>
+        <button class="btn btn-primary modal-action-btn" id="modalConfirmBtn">Borrow / Read Online</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
